@@ -15,8 +15,10 @@ class ListadoController extends Controller
      */
     public function index()
     {        
-        $listado=Listado::get();        
-        return View('listado',compact('listado'));
+        $listado=Listado::get();
+          $lat='39.550051';      
+          $lon='-105.782067,6';          
+        return View('listado',compact(['listado','lat','lon']));
     }
 
     /**
